@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>Strobogrammatic and Palindrome</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Strobogrammatic and Palindrome</title>
+  </head>
 
-<body
-  style=" height: 100vh; display: flex; justify-content: center; align-items: center; background-color: rgba(55, 59, 59, 0.411);">
-  <div class="container mx-auto">
-    <div class="flex " style="justify-content:center; margin-bottom:20px;"><span style="text-align: center;">Enter a
-        number to check if it is Strobogrammatic and Palindorme or not</span></div>
+  <body class="h-screen flex justify-center items-center bg-neutral-400 ">
+    <div class="container mx-auto">
+     <div class="flex justify-center m-[20px]"><span class="text-center">Enter a
+        number to check if it is Strobogrammatic and Palindorme or not</span>
+     </div>
 
-    <form class="mx-auto max-w-sm">
-      <div class="flex items-center border-b border-teal-500 py-2"
-        style="background-color: rgba(99, 98, 98, 0.301); border-radius: 7%; border: 2px solid rgba(0, 0, 0, 0.575);">
+     <form class="mx-auto max-w-sm">
+      <div class="flex items-center py-2 bg-neutral-600/[.301] border-2 rounded-[7%] border-black/[0.575]">
 
         <input
           class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
@@ -29,9 +28,9 @@
         </button>
 
       </div>
-    </form>
+     </form>
 
-    <div id="result" class="hidden flex items-center" style="justify-content: center;">
+    <div id="result" class="hidden flex items-center justify-center ">
       <div class="mt-4">
         <p class="text-gray-700 text-center">
           Is it a Strobogrammatic number? <span id="strobogrammatic"></span>
@@ -42,21 +41,22 @@
       </div>
     </div>
 
-    <section class="container flex" style="justify-content: center; align-items: center; margin-top: 5%;">
-      <div style="border: 7px solid #252324d3;border-radius:10%; width: 50%;">
-        <div style="text-align: center; margin-top: 3%; font-size: larger;"><b> &#9432 info</b></div>
-        <p style="margin: 3%;padding: 2%;">A <b>strobogrammatic</b> number is a number that looks the same when rotated 180 degrees (looked at upside down).
+    <section class="container flex justify-center items-center mt-[5%]">
+      <div class=" border-black border-[7px] rounded-[10%] w-6/12">
+        <div class="text-center mt-[3%] text-lg"><b> &#9432 info</b></div>
+        <p class="m-[3%] p-[2%]">A <b>strobogrammatic</b> number is a number that looks the same when rotated
+          180 degrees (looked at upside down).
           <br>
           <br>
           A <b>Palindrome</b> number is a number (such as 16461) that remains the same when its digits are reversed.
         </p>
-        <button class="closeBTN"
+      </div>
     </section>
 
-  </div>
-</body>
+   </div>
+  </body>
 
-<script>
+  <script>
   const submitButton = document.querySelector("#submit");
   submitButton.addEventListener("click", function (event) {
     event.preventDefault();
@@ -85,6 +85,6 @@
 
     return true;
   };
-</script>
+  </script>
 
 </html>
