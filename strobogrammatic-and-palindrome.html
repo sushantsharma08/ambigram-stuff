@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +8,15 @@
     <title>Strobogrammatic and Palindrome</title>
   </head>
 
-  <body class="h-screen flex justify-center items-center dark:bg-black ">
+  <body class="h-screen flex justify-center items-center bg-white  bg-black/[0.95] ">
     <div class="container mx-auto">
       
-     <div class="flex justify-center m-[20px]"><span class="dark:text-slate-400 text-center">Enter a
+     <div class="flex justify-center m-[20px]"><span class=" text-slate-400 text-center">Enter a
         number to check if it is Strobogrammatic and Palindorme or not</span>
      </div>
 
      <form class="mx-auto max-w-sm">
-      <div class="flex items-center py-2 bg-neutral-600/[.201] rounded-[3%] px-[2%] shadow-xl ">
+      <div class="flex items-center py-2 bg-neutral-600/[.201] rounded-[3%] px-[2%]">
         <input
           class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none placeholder-white"
           type="number" placeholder="969" aria-label="Enter a number">
@@ -30,19 +30,19 @@
 
     <div id="result" class="hidden flex items-center justify-center ">
       <div class="mt-4">
-        <p class="dark:text-slate-400 text-center">
+        <p class=" text-slate-400 text-center">
           Is it a Strobogrammatic number? <span id="strobogrammatic"></span>
         </p>
-        <p class="dark:text-slate-400 text-center mt-4">
+        <p class=" text-slate-400 text-center mt-4">
           Is it a Palindrome number? <span id="palindrome"></span>
         </p>
       </div>
     </div>
 
     <section class="container flex justify-center items-center mt-[5%]">
-      <div class="border-2 rounded-[2%] border-slate-800/[0.5] w-6/12 shadow-2xl ">
-        <div class="dark:text-slate-400 text-center mt-[3%] text-lg "><b> &#9432 info </b></div>
-        <p class="m-[3%] p-[2%] dark:text-slate-400">A <b>strobogrammatic</b> number is a number that looks the same when rotated
+      <div class="border-2 rounded-[2%] border-slate-800/[0.5] w-6/12 ">
+        <div class=" text-slate-400 text-center mt-[3%] text-lg "><b> &#9432 info </b></div>
+        <p class="m-[3%] p-[2%]  text-slate-400">A <b>strobogrammatic</b> number is a number that looks the same when rotated
           180 degrees (looked at upside down).
           <br>
           <br>
@@ -55,33 +55,33 @@
   </body>
 
   <script>
-  const submitButton = document.querySelector("#submit");
-  submitButton.addEventListener("click", function (event) {
-    event.preventDefault();
-    const input = document.querySelector("input");
-    const strobogrammatic = document.querySelector("#strobogrammatic");
-    const palindrome = document.querySelector("#palindrome");
-    const result = document.querySelector("#result");
-    result.classList.remove("hidden");
-    const number = input.value;
-    const strobogrammaticResult = isStrobogrammatic(number.toString());
-    const palindromeResult = isPalindrome(number);
-    strobogrammatic.innerHTML = strobogrammaticResult ? '&#9989;' : '&#10060;';
-    palindrome.innerHTML = palindromeResult ? '&#9989;' : '&#10060;';
-  });
+    const submitButton = document.querySelector("#submit");
+    submitButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      const input = document.querySelector("input");
+      const strobogrammatic = document.querySelector("#strobogrammatic");
+      const palindrome = document.querySelector("#palindrome");
+      const result = document.querySelector("#result");
+      result.classList.remove("hidden");
+      const number = input.value;
+      const strobogrammaticResult = isStrobogrammatic(number.toString());
+      const palindromeResult = isPalindrome(number);
+      strobogrammatic.innerHTML = strobogrammaticResult ? '&#9989;' : '&#10060;';
+      palindrome.innerHTML = palindromeResult ? '&#9989;' : '&#10060;';
+    });
 
-  const isPalindrome = (str) => str === [...str].reverse().join('');
+    const isPalindrome = (str) => str === [...str].reverse().join('');
 
-  const isStrobogrammatic = num => {
-    const map = new Map([['6', '9'], ['9', '6'], ['0', '0'], ['1', '1'], ['8', '8'], ['2', '2']]);
+    const isStrobogrammatic = num => {
+      const map = new Map([['6', '9'], ['9', '6'], ['0', '0'], ['1', '1'], ['8', '8'], ['2', '2']]);
 
-    for (let i = 0, j = num.length - 1; i <= j; i++, j--) {
-      if (!map.has(num[i]) || map.get(num[i]) !== num[j]) {
-        return false;
+      for (let i = 0, j = num.length - 1; i <= j; i++, j--) {
+        if (!map.has(num[i]) || map.get(num[i]) !== num[j]) {
+          return false;
+        }
       }
-    }
 
-    return true;
-  };
+      return true;
+    }; 
   </script>
 </html>
