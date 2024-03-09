@@ -9,6 +9,6 @@
 
 
 ### Palindorme Number
- - ***A is a number (such as 16461) that remains the same when its digits are reversed.***
+ - ***A Palindrome is a number (such as 16461) that remains the same when its digits are reversed.***
  - Example#1: a given number is 12321 , when reversed it is read 12321 : **Its a plindrome no.**
  - Example#2: A given number is 12345 , when reversed it is read 54321 : **not a plindrome no.**
